@@ -1,8 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css'; // Global styles
-import App from './App'; // The main App component
-
+import App from './App'; // Adjust the path as needed
+import './index.css'; // Global styles, if any
 
 ReactDOM.render(
   <React.StrictMode>
@@ -10,10 +9,6 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById('root')
 );
-
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://cra.link/PWA
 
 
 
