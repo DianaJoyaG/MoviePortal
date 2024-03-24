@@ -1,9 +1,8 @@
+// Home.js
 import React, { useState } from 'react';
 import MovieList from '../components/MovieList';
-import MovieDetails from '../components/MovieDetails';
 import Search from '../components/Search';
 import GenreFilter from '../components/GenreFilter';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './Home.css';
 
 const Home = () => {
@@ -18,24 +17,18 @@ const Home = () => {
 
   const handleFilterChange = (genreId) => {
     setSelectedGenre(genreId);
-    
   };
 
   return (
-    <Router>
-      <div>
-        <Search onSearchResults={handleSearchResults} />
-        <GenreFilter onFilterChange={handleFilterChange} />
-
-        <Routes>
-          <Route path="/" element={<MovieList movies={searchResults.length > 0 ? searchResults : movies} />} />
-          <Route path="/movie/:id" element={<MovieDetails />} />
-        </Routes>
-      </div>
-    </Router>
+    <div>
+      <Search onSearchResults={handleSearchResults} />
+      <GenreFilter onFilterChange={handleFilterChange} />
+      <MovieList movies={searchResults.length > 0 ? searchResults : movies} />
+    </div>
   );
 };
 
 export default Home;
+
 
   

@@ -7,17 +7,10 @@ import './App.css'; // Your main stylesheet (if you have one)
 const App = () => {
   return (
     <Router>
-      <div>
-        {/* Global application components like a header or navigation can go here */}
-      </div>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/movie/:id" element={<Movie />} />
-        {/* You can add more routes here as your application grows */}
+        <Route path="/" element={<Home/>} />
+        <Route path="/movie/:id" element={<Movie/>} />  
       </Routes>
-      <div>
-        {/* Global application components like a footer can go here */}
-      </div>
     </Router>
   );
 };
