@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import './GenreFilter.css';
 
 const GenreFilter = ({ onFilterChange }) => {
   const [genres, setGenres] = useState([]);
@@ -8,11 +9,10 @@ const GenreFilter = ({ onFilterChange }) => {
   useEffect(() => {
     const fetchGenres = async () => {
       try {
-        const response = await axios.get(`https://api.themoviedb.org/3/genre/movie/list?api_key=YOUR_API_KEY&language=en-US`);
+        const response = await axios.get(`https://api.themoviedb.org/3/genre/movie/list?api_key=e09a8a1a433d94e45e49b80b3af7b89d&language=en-US`);
         setGenres(response.data.genres);
       } catch (error) {
         console.error('Error fetching genres:', error);
-        // Handle the error state appropriately
       }
     };
 

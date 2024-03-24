@@ -1,6 +1,7 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import MovieDetails from '../components/MovieDetails';
+import './Movie.css';
 
 const Movie = () => {
   let { id } = useParams(); // This gets the `id` param from the URL

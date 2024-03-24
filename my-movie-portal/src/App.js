@@ -9,14 +9,13 @@ const App = () => {
     <Router>
       <div>
         {/* Global application components like a header or navigation can go here */}
-        
-        {/* Define your application's routes */}
-        <Routes>
-          <Route path="/" element={<Home />} exact />
-          <Route path="/movie/:id" element={<Movie />} />
-          {/* You can add more routes here as your application grows */}
-        </Routes>
-
+      </div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/movie/:id" element={<Movie />} />
+        {/* You can add more routes here as your application grows */}
+      </Routes>
+      <div>
         {/* Global application components like a footer can go here */}
       </div>
     </Router>

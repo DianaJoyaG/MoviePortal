@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useParams, useNavigate } from 'react-router-dom';
+import './MovieDetails.css';
 
 const MovieDetails = () => {
   const [movie, setMovie] = useState(null);
@@ -11,7 +12,7 @@ const MovieDetails = () => {
   useEffect(() => {
     const fetchMovieDetails = async () => {
       try {
-        const response = await axios.get(`https://api.themoviedb.org/3/movie/${id}?api_key=YOUR_API_KEY`);
+        const response = await axios.get(`https://api.themoviedb.org/3/movie/${id}?api_key=e09a8a1a433d94e45e49b80b3af7b89d`);
         setMovie(response.data);
       } catch (error) {
         setError(error);
@@ -22,19 +23,13 @@ const MovieDetails = () => {
   }, [id]);
 
   if (error) return <div>Error fetching movie details: {error.message}</div>;
-  if (!movie) return <div>Loading...</div>; // You might want to handle loading state differently
-
+  if (!movie) return <div>Loading...</div>; 
   return (
     <div>
       <button onClick={() => navigate(-1)}>Go Back</button>
       <h2>{movie.title} ({new Date(movie.release_date).getFullYear()})</h2>
       <p><strong>Rating:</strong> {movie.vote_average}</p>
       <p>{movie.overview}</p>
-      <div>
-        <h3>Cast</h3>
-        {/* Implement cast list here. You might need to make another API call to get this data. */}
-      </div>
-      {/* You can add more movie details here */}
     </div>
   );
 };

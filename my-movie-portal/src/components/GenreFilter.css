@@ -1,0 +1,40 @@
+/* Container for the genre filter */
+div {
+    margin-bottom: 20px; /* Add some space below the filter for spacing */
+  }
+  
+  /* Styling for the select dropdown */
+  select {
+    width: 100%; /* Make the select box full width */
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 5px; /* Rounded corners for a modern look */
+    border: 1px solid #ccc; /* A subtle border */
+    background-color: #f9f9f9; /* A light background */
+    appearance: none; /* Remove default styling */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024"><path fill="currentColor" d="M1014.6 226.6L800.4 12.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L934.7 237H89.3L268.9 68.7c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L9.4 226.6c-12.5 12.5-12.5 32.8 0 45.3l214.2 214.2c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L89.3 287h845.4L800.4 540.3c-12.5 12.5-12.5 32.8 0 45.3 6.2 6.2 14.4 9.4 22.6 9.4s16.4-3.1 22.6-9.4l214.2-214.2c12.5-12.5 12.5-32.8 0-45.3z"/></svg>'); /* Custom dropdown arrow */
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    cursor: pointer; /* Change cursor to pointer to indicate it's clickable */
+  }
+  
+  /* Change focus color */
+  select:focus {
+    border-color: #007bff;
+    outline: none; /* Remove the default focus outline */
+  }
+  
+  /* Option styling - this part is mostly for browsers that support styling options */
+  select option {
+    padding: 10px; /* Add padding for option elements */
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    select {
+      font-size: 14px; /* Slightly smaller font size on smaller screens */
+    }
+  }
+  

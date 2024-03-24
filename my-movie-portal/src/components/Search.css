@@ -1,0 +1,58 @@
+/* Search Form Container */
+form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Search Input Field */
+  input[type="text"] {
+    width: 70%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px; /* Rounded left corners */
+    font-size: 16px;
+    outline: none; /* Removes the outline */
+  }
+  
+  /* Clear default styles on focus */
+  input[type="text"]:focus {
+    border-color: #007bff;
+  }
+  
+  /* Search Button */
+  button {
+    padding: 10px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 0 4px 4px 0; /* Rounded right corners */
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Change background color on hover */
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Responsive adjustments for smaller screens */
+  @media (max-width: 768px) {
+    form {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  
+    input[type="text"] {
+      width: auto;
+      border-radius: 4px; /* Rounded corners for mobile */
+      margin-bottom: 10px;
+    }
+  
+    button {
+      width: 100%;
+      border-radius: 4px; /* Rounded corners for mobile */
+    }
+  }
+  

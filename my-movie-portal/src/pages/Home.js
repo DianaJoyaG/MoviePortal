@@ -4,6 +4,7 @@ import MovieDetails from '../components/MovieDetails';
 import Search from '../components/Search';
 import GenreFilter from '../components/GenreFilter';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import './Home.css';
 
 const Home = () => {
   const [movies, setMovies] = useState([]);
@@ -17,7 +18,7 @@ const Home = () => {
 
   const handleFilterChange = (genreId) => {
     setSelectedGenre(genreId);
-    // Implement functionality to fetch and set movies based on selected genre
+    
   };
 
   return (

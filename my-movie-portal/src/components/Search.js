@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import './Search.css';
 
 const Search = ({ onSearchResults }) => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -33,3 +34,15 @@ const Search = ({ onSearchResults }) => {
 };
 
 export default Search;
+
+
+// export const searchMovies = async (query, page = 1) => {
+//   try {
+//     const response = await tmdbApi.get('/search/movie', {
+//       params: { query, page }
+//     });
+//     return response.data.results;
+//   } catch (error) {
+//     throw error;
+//   }
+// };
