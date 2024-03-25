@@ -1,8 +1,11 @@
 /* Search Form Container */
 form {
+    height: 40px;
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
+    margin-top: 20px;
+    
   }
   
   /* Search Input Field */
@@ -24,8 +27,8 @@ form {
   button {
     padding: 10px;
     border: none;
-    background-color: #007bff;
-    color: white;
+    background-color: #282c34;
+    color: rgb(162, 196, 128);
     font-size: 16px;
     cursor: pointer;
     border-radius: 0 4px 4px 0; /* Rounded right corners */

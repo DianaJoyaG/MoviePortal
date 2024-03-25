@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Movie from './pages/Movie';
-import './App.css'; // Your main stylesheet (if you have one)
+import './App.css'; 
 
 const App = () => {
   return (

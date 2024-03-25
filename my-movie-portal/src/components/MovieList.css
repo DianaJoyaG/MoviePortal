@@ -7,17 +7,21 @@ body {
   }
   
   h2 {
-    color: #444;
+    color: #d6600c;
     font-size: 24px;
+    text-align: center;
   }
   
   ul {
+    margin-left: 400px;
     list-style-type: none;
     padding: 0;
+    width: 800px;
   }
   
   ul li {
-    background-color: #fff;
+ 
+    background-color: #ffffffdf;
     border: 1px solid #ddd;
     margin-top: 5px;
     padding: 10px;
@@ -26,7 +30,7 @@ body {
   
   ul li a {
     text-decoration: none;
-    color: #0056b3;
+    color: #29562b;
     font-weight: bold;
   }
   

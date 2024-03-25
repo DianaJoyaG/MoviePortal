@@ -5,12 +5,13 @@ div {
   
   /* Styling for the select dropdown */
   select {
-    width: 100%; /* Make the select box full width */
+    margin-left: 400px;
+    width: 800px; 
     padding: 10px 15px;
     font-size: 16px;
     border-radius: 5px; /* Rounded corners for a modern look */
     border: 1px solid #ccc; /* A subtle border */
-    background-color: #f9f9f9; /* A light background */
+    background-color: #f9f9f9d4; /* A light background */
     appearance: none; /* Remove default styling */
     -webkit-appearance: none;
     -moz-appearance: none;
