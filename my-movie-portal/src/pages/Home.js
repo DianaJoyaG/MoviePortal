@@ -17,7 +17,7 @@ const Home = () => {
     useEffect(() => {
         const fetchMovies = async () => {
             try {
-                // Adjust this API call to include genre filtering if selectedGenre is set
+                
                 let url = `https://api.themoviedb.org/3/movie/top_rated?api_key=${API_KEY}`;
                 if (selectedGenre) {
                     url = `https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&with_genres=${selectedGenre}`;
@@ -40,7 +40,7 @@ const Home = () => {
 
         fetchMovies();
         fetchGenres();
-    }, [selectedGenre]); // Add selectedGenre to useEffect dependencies to refetch movies when it changes
+    }, [selectedGenre]); 
 
     const handleSearchResults = (results) => {
         setSearchResults(results);

@@ -7,7 +7,7 @@ const MovieDetails = () => {
   const [movie, setMovie] = useState(null);
   const [error, setError] = useState(null);
   const { id } = useParams(); // This gets the movie ID from the URL
-  const navigate = useNavigate(); // This is for programmatically navigating back
+  const navigate = useNavigate(); 
 
   useEffect(() => {
     const fetchMovieDetails = async () => {
