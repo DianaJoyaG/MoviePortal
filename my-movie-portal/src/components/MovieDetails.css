@@ -1,44 +1,55 @@
-/* Movie Details Container */
-.movie-details {
-    max-width: 800px;
-    margin: auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  }
-  
-  /* 'Go Back' Button Styling */
-  .button-back {
-    display: inline-block;
-    background-color: #007bff;
-    color: #ffffff;
-    padding: 10px 20px;
-    font-size: 16px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-bottom: 20px;
-  }
-  
-  .button-back:hover {
-    background-color: #0056b3;
-  }
-  
-  /* Movie Title */
-  .movie-title {
-    color: #333;
-    margin: 0;
-    margin-bottom: 10px;
-  }
-  
-  /* Movie Rating */
-  .movie-rating strong {
-    color: #007bff;
-  }
-  
-  /* Movie Overview */
-  .movie-overview {
-    line-height: 1.6;
-  }
-  
+/* Container for the entire component to center the card */
+.MovieDetails-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px; /* Add padding to ensure it doesn't touch the edges */
+}
+
+/* The card itself */
+.MovieDetails-card {
+  width: 100%;
+  max-width: 800px; /* Maximum width of the card */
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Styling for the "Go Back" button */
+.MovieDetails-backButton {
+  display: block;
+  margin-bottom: 20px;
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.MovieDetails-backButton:hover {
+  background-color: #0056b3;
+}
+
+/* Styling for the movie title */
+.MovieDetails-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+/* Styling for the movie rating */
+.MovieDetails-rating {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* Styling for the movie overview */
+.MovieDetails-overview {
+  font-size: 16px;
+  line-height: 1.6;
+}

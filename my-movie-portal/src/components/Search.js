@@ -16,7 +16,7 @@ const Search = ({ onSearchResults }) => {
       onSearchResults(response.data.results);
     } catch (error) {
       console.error('Error searching for movies:', error);
-      // Handle the error state appropriately
+      
     }
   };
 
@@ -36,13 +36,3 @@ const Search = ({ onSearchResults }) => {
 export default Search;
 
 
-// export const searchMovies = async (query, page = 1) => {
-//   try {
-//     const response = await tmdbApi.get('/search/movie', {
-//       params: { query, page }
-//     });
-//     return response.data.results;
-//   } catch (error) {
-//     throw error;
-//   }
-// };

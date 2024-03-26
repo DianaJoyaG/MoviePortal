@@ -6,9 +6,7 @@ import '../components/Search.css';
 import '../components/MovieList.css';
 import '../components/GenreFilter.css';
 
-
 const API_KEY = "d8f9605ca89ef4cf65d48c2dd815b4a4";
-
 
 const Home = () => {
     const [movies, setMovies] = useState([]);
@@ -19,7 +17,12 @@ const Home = () => {
     useEffect(() => {
         const fetchMovies = async () => {
             try {
-                const response = await axios.get(`https://api.themoviedb.org/3/movie/top_rated?api_key=${API_KEY}`);
+                // Adjust this API call to include genre filtering if selectedGenre is set
+                let url = `https://api.themoviedb.org/3/movie/top_rated?api_key=${API_KEY}`;
+                if (selectedGenre) {
+                    url = `https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&with_genres=${selectedGenre}`;
+                }
+                const response = await axios.get(url);
                 setMovies(response.data.results);
             } catch (error) {
                 console.error('Error fetching movies:', error);
@@ -37,18 +40,19 @@ const Home = () => {
 
         fetchMovies();
         fetchGenres();
-    }, []);
+    }, [selectedGenre]); // Add selectedGenre to useEffect dependencies to refetch movies when it changes
 
     const handleSearchResults = (results) => {
         setSearchResults(results);
-        setSelectedGenre(''); // Reset genre filter when new search is made
+        setSelectedGenre(''); // Reset genre filter when a new search is made
     };
 
     const handleFilterChange = (genreId) => {
         setSelectedGenre(genreId);
+        setSearchResults([]); // Clear search results to display movies based on the genre filter
     };
 
-    // Search Component Logic
+    // Component: Search
     const Search = ({ onSearchResults }) => {
         const [searchTerm, setSearchTerm] = useState('');
 
@@ -79,16 +83,11 @@ const Home = () => {
         );
     };
 
-    // GenreFilter Component Logic
+    // Component: GenreFilter
     const GenreFilter = ({ onFilterChange }) => {
-        const handleGenreChange = (event) => {
-            setSelectedGenre(event.target.value);
-            onFilterChange(event.target.value);
-        };
-
         return (
             <div>
-                <select value={selectedGenre} onChange={handleGenreChange}>
+                <select value={selectedGenre} onChange={(e) => onFilterChange(e.target.value)}>
                     <option value="">Select a Genre</option>
                     {genres.map((genre) => (
                         <option key={genre.id} value={genre.id}>
@@ -100,9 +99,9 @@ const Home = () => {
         );
     };
 
-    // MovieList Component Logic
+    // Component: MovieList
     const MovieList = ({ movies }) => {
-        if (!movies.length) return <div>Loading movies...</div>;
+        if (!movies.length) return <div>No movies found.</div>;
 
         return (
             <div>

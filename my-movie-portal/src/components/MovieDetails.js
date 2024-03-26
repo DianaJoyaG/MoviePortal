@@ -25,11 +25,13 @@ const MovieDetails = () => {
   if (error) return <div>Error fetching movie details: {error.message}</div>;
   if (!movie) return <div>Loading...</div>; 
   return (
-    <div>
+    <div className='MovieDetails-container'>
+      <div className='MovieDetails-card'>
       <button onClick={() => navigate(-1)}>Go Back</button>
       <h2>{movie.title} ({new Date(movie.release_date).getFullYear()})</h2>
       <p><strong>Rating:</strong> {movie.vote_average}</p>
       <p>{movie.overview}</p>
+      </div>
     </div>
   );
 };
